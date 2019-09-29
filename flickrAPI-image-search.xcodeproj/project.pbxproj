@@ -41,6 +41,7 @@
 		D8EB930979B375F7891FACC9 /* Pods-flickrAPI-image-search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flickrAPI-image-search.release.xcconfig"; path = "Target Support Files/Pods-flickrAPI-image-search/Pods-flickrAPI-image-search.release.xcconfig"; sourceTree = "<group>"; };
 		E729082623413B9A0023ECDC /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E729082823413F630023ECDC /* SearchViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+UITableView.swift"; sourceTree = "<group>"; };
+		E729082A234143790023ECDC /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
 		E73E4019233ECE6E00F27615 /* flickrAPI-image-search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "flickrAPI-image-search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73E401C233ECE6E00F27615 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E73E4023233ECE6E00F27615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 				E73E4025233ECE7100F27615 /* Assets.xcassets */,
 				E73E4027233ECE7100F27615 /* LaunchScreen.storyboard */,
 				E73E402A233ECE7100F27615 /* Info.plist */,
+				E729082A234143790023ECDC /* .travis.yml */,
 			);
 			path = "flickrAPI-image-search";
 			sourceTree = "<group>";
