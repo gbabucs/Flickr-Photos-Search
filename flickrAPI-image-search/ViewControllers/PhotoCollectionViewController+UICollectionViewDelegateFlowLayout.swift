@@ -12,19 +12,14 @@ import UIKit
 // MARK: - UICollectionViewDelegateFlowLayout
 //--------------------------------------------------------------------------
 
-
 extension PhotoCollectionViewController: UICollectionViewDelegateFlowLayout {
     
-    // FIXME: - fix updating width/height when rotating screen
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let itemsPerRow = CGFloat(viewModel?.itemsPerRow ?? 0)
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
-        
-        print(widthPerItem)
-        print(CGSize(width: widthPerItem, height: widthPerItem))
         
         return CGSize(width: widthPerItem, height: widthPerItem)
     }

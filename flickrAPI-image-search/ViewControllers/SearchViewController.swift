@@ -22,7 +22,7 @@ class SearchViewController: UIViewController {
     // MARK: - Properties
     //--------------------------------------------------------------------------
     
-    private let viewModel = SearchViewModel()
+    let viewModel = SearchViewModel()
     
     //--------------------------------------------------------------------------
     // MARK: - ViewController Lifecycle
@@ -31,6 +31,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Flickr Photo Search"
         self.viewModel.getSearchHistory(completion: updateTableView)
     }
     
@@ -85,39 +86,4 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.resetSearchBar()
     }
-}
-
-//--------------------------------------------------------------------------
-// MARK: - UITableViewDelegate
-//--------------------------------------------------------------------------
-
-extension SearchViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showPhotoCollectionViewController", sender: self.viewModel.searchHistory[indexPath.row])
-    }
-    
-}
-
-//--------------------------------------------------------------------------
-// MARK: - UITableViewDataSource
-//--------------------------------------------------------------------------
-
-extension SearchViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.searchHistory.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchHistoryTableViewCell.reuseIdentifier) as? SearchHistoryTableViewCell
-            else { return UITableViewCell() }
-        
-        let searchText = self.viewModel.searchHistory[indexPath.row]
-        
-        cell.configure(with: searchText)
-        
-        return cell
-    }
-    
 }
