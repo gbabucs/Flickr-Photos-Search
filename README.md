@@ -4,7 +4,7 @@ This is the basic example for the Flickr image search module. Its will search an
 
 # Things to remember
 Clone the repo and run flickrAPI-image-search.xcworkspace<br />
-pod install
+optional if pod is not working do pod deintegrate and then pod install
 
 # Third Party Library used
 pod 'Alamofire', '~> 5.0.0-rc.2' <br />
