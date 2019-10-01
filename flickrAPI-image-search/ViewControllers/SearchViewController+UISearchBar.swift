@@ -23,7 +23,7 @@ extension SearchViewController: UISearchBarDelegate {
         
         self.viewModel.save(search: searchText, with: updateTableView)
         
-        performSegue(withIdentifier: "showPhotoCollectionViewController", sender: searchText)
+        performSegue(withIdentifier: UIStoryboardSegue.identifier, sender: searchText)
         self.resetSearchBar()
     }
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - Photos
+// MARK: - PhotosModel
 
 struct PhotosModel: Codable {
     let page: Int

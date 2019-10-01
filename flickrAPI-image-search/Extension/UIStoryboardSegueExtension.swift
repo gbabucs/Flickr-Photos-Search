@@ -9,5 +9,5 @@
 import UIKit
 
 extension UIStoryboardSegue {
-    
+    static let identifier = "showPhotoCollectionViewController"
 }

@@ -15,7 +15,7 @@ import UIKit
 extension SearchViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showPhotoCollectionViewController", sender: self.viewModel.searchHistory[indexPath.row])
+        performSegue(withIdentifier: UIStoryboardSegue.identifier, sender: self.viewModel.searchHistory[indexPath.row])
     }
 }
 

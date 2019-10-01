@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: - PhotoModel
+
 struct PhotoModel: Codable {
     let id: String
     let owner: String

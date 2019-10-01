@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - FlickrImage
+// MARK: - FlickrImageResultModel
 
 struct FlickrImageResultModel: Codable {
     let photos: PhotosModel

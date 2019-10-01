@@ -39,8 +39,8 @@ class PhotoSearchRequest: NSObject {
     ///   - itemsPerPage:   The `Int` value
     ///   - completion:     The `PhotosResultHandler` value
     
-    func requestPhotos(searchText: String, page: Int, itemsPerPage: Int, completion: @escaping PhotosResultHandler) {
-        let parameters = "&text=\(searchText)&page=\(page)&per_page=\(itemsPerPage)"
+    func requestPhotos(searchQuery: String, page: Int, itemsPerPage: Int, completion: @escaping PhotosResultHandler) {
+        let parameters = "&text=\(searchQuery)&page=\(page)&per_page=\(itemsPerPage)"
         
         DataAdapter.shared.fetchFlickImage(parameters: parameters, method: method) { response, error in
             

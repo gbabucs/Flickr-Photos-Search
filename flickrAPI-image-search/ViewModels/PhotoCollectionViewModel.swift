@@ -48,7 +48,9 @@ class PhotoCollectionViewModel {
     func requestPhotos(completion: @escaping (_ error: AppError?) -> ()) {
         self.currentPage += 1
         
-        self.photoSearchRequest.requestPhotos(searchText: searchText, page: currentPage, itemsPerPage: itemsPerPage) { photos, metaData, error in
+        let searchQuery = searchText.replacingOccurrences(of: " ", with: "+")
+        
+        self.photoSearchRequest.requestPhotos(searchQuery: searchQuery, page: currentPage, itemsPerPage: itemsPerPage) { photos, metaData, error in
             
             guard let photos = photos,
                 let currentPage = metaData?["currentPage"] as? Int,

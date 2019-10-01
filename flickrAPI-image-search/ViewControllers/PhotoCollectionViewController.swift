@@ -41,6 +41,7 @@ class PhotoCollectionViewController: UIViewController {
                 if let error = error  {
                     self.showAlert(with: error.title, error: error.message)
                 }
+                
                 self.updateCollectionView()
             }
             
@@ -53,7 +54,7 @@ class PhotoCollectionViewController: UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-
+        
         self.collectionView.reloadData()
     }
     
