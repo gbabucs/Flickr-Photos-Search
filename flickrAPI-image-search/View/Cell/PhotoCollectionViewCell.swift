@@ -8,7 +8,6 @@
 
 import UIKit
 import AlamofireImage
-import SkeletonView
 
 class PhotoCollectionViewCell: UICollectionViewCell {
     
@@ -25,7 +24,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         self.imageView.contentMode = .scaleAspectFit
         self.imageView.translatesAutoresizingMaskIntoConstraints = true
-        self.imageView.isSkeletonable = true
     }
 }
 

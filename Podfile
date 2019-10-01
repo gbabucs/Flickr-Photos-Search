@@ -9,15 +9,12 @@ target 'flickrAPI-image-search' do
   pod 'Alamofire', '~> 5.0.0-rc.2'
   pod 'AlamofireImage', '4.0.0-beta.5'
   pod 'ReachabilitySwift'
-  pod "SkeletonView"
   
   target 'flickrAPI-image-searchTests' do
     inherit! :search_paths
       # Pods for testing
       pod 'Alamofire', '~> 5.0.0-rc.2'
       pod 'AlamofireImage', '4.0.0-beta.5'
-      pod 'ReachabilitySwift'
-      pod "SkeletonView"
     end
 
 end
