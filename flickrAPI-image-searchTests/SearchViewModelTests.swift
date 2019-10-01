@@ -32,7 +32,7 @@ class SearchViewModelTests: XCTestCase {
     
     func testGetSearchHistoryInUserDefaults_contains_values() {
         let searchText1 = "Netherlands"
-        let searchText2 = "Windmil"
+        let searchText2 = "Holland"
         
         self.viewModel.save(search: searchText1) { }
         self.viewModel.save(search: searchText2) { }

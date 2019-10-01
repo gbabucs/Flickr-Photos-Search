@@ -74,7 +74,7 @@ class SearchViewControllerTests: XCTestCase {
     
     func test_sut_HasSegue_Name_showPhotoCollectionViewController() {
 
-        let targetIdentifier = "showPhotoCollectionViewController"
+        let targetIdentifier = UIStoryboardSegue.identifier
         XCTAssertTrue(hasSegueWithIdentifier(id: targetIdentifier))
     }
         
