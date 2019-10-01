@@ -39,12 +39,12 @@ class SearchViewController: UIViewController {
     // MARK: - Helpers
     //--------------------------------------------------------------------------
     
-    private func resetSearchBar() {
+    func resetSearchBar() {
         self.searchBar.resignFirstResponder()
-        self.searchBar.text = nil
+        self.searchBar.text = ""
     }
     
-    private func updateTableView() {
+    func updateTableView() {
         self.tableView.reloadData()
     }
     
@@ -60,30 +60,5 @@ class SearchViewController: UIViewController {
         let viewModel = PhotoCollectionViewModel(searchText: searchText)
         
         photoCollectionViewController.viewModel = viewModel
-        
-    }
-}
-
-//--------------------------------------------------------------------------
-// MARK: - UISearchBarDelegate
-//--------------------------------------------------------------------------
-
-extension SearchViewController: UISearchBarDelegate {
-    
-    //--------------------------------------------------------------------------
-    // MARK: - User Interaction
-    //--------------------------------------------------------------------------
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchText = searchBar.text else { return }
-        
-        self.viewModel.save(search: searchText, with: updateTableView)
-        
-        performSegue(withIdentifier: "showPhotoCollectionViewController", sender: searchText)
-        self.resetSearchBar()
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        self.resetSearchBar()
     }
 }

@@ -16,12 +16,16 @@ extension PhotoCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let itemsPerRow = CGFloat(viewModel?.itemsPerRow ?? 0)
-        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-        let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth / itemsPerRow
+        guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout,
+            let viewModel = viewModel else { return CGSize.zero }
         
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        let numberOfItemsPerRow = CGFloat(viewModel.itemsPerRow)
+        let extraPadding = sectionInsets.left * numberOfItemsPerRow
+        let inset = flowLayout.sectionInset.right + flowLayout.sectionInset.left
+        let availableWidth = view.frame.width - extraPadding - inset
+        let width = availableWidth / numberOfItemsPerRow
+        
+        return CGSize(width: width, height: width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

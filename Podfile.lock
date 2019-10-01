@@ -3,27 +3,27 @@ PODS:
   - AlamofireImage (4.0.0-beta.5):
     - Alamofire (~> 5.0.0-rc.2)
   - ReachabilitySwift (4.3.1)
-  - SwiftyJSON (4.3.0)
+  - SkeletonView (1.8.2)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.2)
   - AlamofireImage (= 4.0.0-beta.5)
   - ReachabilitySwift
-  - SwiftyJSON (~> 4.0)
+  - SkeletonView
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
     - ReachabilitySwift
-    - SwiftyJSON
+    - SkeletonView
 
 SPEC CHECKSUMS:
   Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
   AlamofireImage: f6dfe201f6d59cc6a045b5cb228b58962b8ef31d
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
-  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  SkeletonView: bb27c39857e5492136f02ee8a3aa78de55d12ecd
 
-PODFILE CHECKSUM: 28afaa6080abf809d0e5252f7491d61fa8e15587
+PODFILE CHECKSUM: f916ce0741d5df06a3fb8d7a1589ad18a328da66
 
-COCOAPODS: 1.8.1
+COCOAPODS: 1.6.1

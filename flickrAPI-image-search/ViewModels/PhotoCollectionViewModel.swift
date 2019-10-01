@@ -17,7 +17,7 @@ class PhotoCollectionViewModel {
     let itemsPerPage = 30
     let itemsPerRow = 2
     let itemsLimit = 15
-    let itemsPerSection = 20
+    let itemsPerSection = 10
     
     //--------------------------------------------------------------------------
     // MARK: - Properties
@@ -27,7 +27,7 @@ class PhotoCollectionViewModel {
     let photoSearchRequest: PhotoSearchRequest
     let navigationTitle: String
     
-    var photos: [Photo] = []
+    var photos: [PhotoModel] = []
     var currentPage = 0
     var totalPages = 0
     

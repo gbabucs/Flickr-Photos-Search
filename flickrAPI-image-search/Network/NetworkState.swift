@@ -10,7 +10,10 @@ import Foundation
 import Alamofire
 
 class NetworkState {
-    class func isConnected() ->Bool {
-        return NetworkReachabilityManager()!.isReachable
+    
+    class func isConnected() -> Bool {
+        guard let reachabilityManager = NetworkReachabilityManager() else { return false }
+        
+        return reachabilityManager.isReachable
     }
 }

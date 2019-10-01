@@ -14,16 +14,16 @@ import UIKit
 
 extension PhotoCollectionViewController: UICollectionViewDataSource {
     
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        guard let viewModel = viewModel else { return 0 }
-//
-//        return viewModel.photos.count
-//    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        guard let viewModel = viewModel else { return 0 }
+
+        return viewModel.photos.count / viewModel.itemsPerSection
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let viewModel = viewModel else { return 0 }
         
-        return viewModel.photos.count
+        return viewModel.itemsPerSection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,9 +55,10 @@ extension PhotoCollectionViewController: UICollectionViewDelegate {
         guard let viewModel = viewModel else { return }
         
         let itemsPerPage = viewModel.itemsPerPage
+        let itemsPerSection = viewModel.itemsPerSection
         let itemsLimit = viewModel.itemsLimit
         
-        let currentItem = indexPath.row + indexPath.section
+        let currentItem = indexPath.row + (indexPath.section * itemsPerSection)
         let limit = (viewModel.currentPage * itemsPerPage) - itemsLimit
         let isLoadMore = (currentItem > limit) && (viewModel.currentPage < viewModel.totalPages)
         
@@ -65,6 +66,10 @@ extension PhotoCollectionViewController: UICollectionViewDelegate {
         if NetworkState.isConnected() {
             if isLoadMore {
                 viewModel.requestPhotos { error in
+                    if let error = error  {
+                        self.showAlert(with: error.title, error: error.message)
+                    }
+                    
                     self.updateCollectionView()
                 }
             }
@@ -74,5 +79,4 @@ extension PhotoCollectionViewController: UICollectionViewDelegate {
             self.showAlert(with: networkError.title, error: networkError.message)
         }
     }
-    
 }

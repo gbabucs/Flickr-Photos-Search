@@ -58,18 +58,17 @@ class PhotoCollectionViewController: UIViewController {
         self.navigationItem.title = viewModel?.navigationTitle
     }
     
-    func showAlert(with title: String, error message: String) {
-        let alertController = UIAlertController(title: title , message: message , preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
-        
-        alertController.addAction(dismissAction)
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
     func updateCollectionView() {
         DispatchQueue.main.async {
-            self.collectionView.reloadData()
+            if self.collectionView.numberOfSections == 0 {
+                self.collectionView.reloadData()
+            } else {
+                let numberOfSections = self.collectionView.numberOfSections
+                let lastIndexOfNewSections = numberOfSections + 2
+                let indexSet = IndexSet(integersIn: numberOfSections...lastIndexOfNewSections)
+                
+                self.collectionView.insertSections(indexSet)
+            }
         }
     }
     

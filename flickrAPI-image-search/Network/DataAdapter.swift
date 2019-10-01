@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class DataAdapter {
     
     static let shared = DataAdapter()
@@ -17,7 +16,7 @@ class DataAdapter {
     // MARK: - Typealias
     //--------------------------------------------------------------------------
     
-    typealias GetCompletionHandler = (FlickrImage?, AppError?) -> ()
+    typealias GetCompletionHandler = (FlickrImageResultModel?, AppError?) -> ()
     
     //--------------------------------------------------------------------------
     // MARK: - Functions
@@ -34,9 +33,8 @@ class DataAdapter {
     func fetchFlickImage(parameters: String, method: String, completion: @escaping GetCompletionHandler) {
         let service = FlickrAPIService(flickrAPI: .userSearch(query: parameters, method: method))
         
-        self.fetchData(from: service, type: FlickrImage.self, completion: completion)
+        self.fetchData(from: service, type: FlickrImageResultModel.self, completion: completion)
     }
-
     
     //--------------------------------------------------------------------------
     // MARK: - Private functions
@@ -48,14 +46,14 @@ class DataAdapter {
             let result = self.processData(type: type, response: response)
             
             if let _ = error {
-               appError = AppError.dataError
+                appError = AppError.dataError
             }
             
             completion(result, appError)
         }
     }
     
-    private func processData<T: Codable>(type: T.Type, response: Data?) -> T? {
+    func processData<T: Codable>(type: T.Type, response: Data?) -> T? {
         var result: T? = nil
         
         if let jsondata = response {

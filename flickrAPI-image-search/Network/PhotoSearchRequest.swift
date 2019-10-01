@@ -20,7 +20,7 @@ class PhotoSearchRequest: NSObject {
     // MARK: - Typealias
     //--------------------------------------------------------------------------
     
-    typealias PhotosResultHandler = ([Photo]?, [String: Any]?, AppError?) -> ()
+    typealias PhotosResultHandler = ([PhotoModel]?, [String: Any]?, AppError?) -> ()
     
     override init() {
         self.method = "flickr.photos.search"
@@ -45,8 +45,8 @@ class PhotoSearchRequest: NSObject {
         DataAdapter.shared.fetchFlickImage(parameters: parameters, method: method) { response, error in
             
             if let response = response {
-                let photos = self.parsePhotos(value: response)
-                let metaData = self.parseMetaData(value: response)
+                let photos = self.parsePhotos(with: response)
+                let metaData = self.parseMetaData(with: response)
                 
                 completion(photos, metaData, nil)
             }
@@ -62,11 +62,11 @@ class PhotoSearchRequest: NSObject {
     //--------------------------------------------------------------------------
     
     
-    private func parsePhotos(value: FlickrImage) -> [Photo] {
+    func parsePhotos(with value: FlickrImageResultModel) -> [PhotoModel] {
         return value.photos.photo
     }
     
-    private func parseMetaData(value: FlickrImage) -> [String: Any] {
+    func parseMetaData(with value: FlickrImageResultModel) -> [String: Any] {
         var metaData: [String: Int] = [:]
         
         metaData["currentPage"] = value.photos.page
@@ -74,5 +74,4 @@ class PhotoSearchRequest: NSObject {
         
         return metaData
     }
-    
 }

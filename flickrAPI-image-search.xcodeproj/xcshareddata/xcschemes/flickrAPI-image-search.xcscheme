@@ -20,14 +20,49 @@
                ReferencedContainer = "container:flickrAPI-image-search.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6F46E439234210EE00403707"
+               BuildableName = "flickrAPI-image-searchTests.xctest"
+               BlueprintName = "flickrAPI-image-searchTests"
+               ReferencedContainer = "container:flickrAPI-image-search.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E73E4018233ECE6E00F27615"
+            BuildableName = "flickrAPI-image-search.app"
+            BlueprintName = "flickrAPI-image-search"
+            ReferencedContainer = "container:flickrAPI-image-search.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6F46E439234210EE00403707"
+               BuildableName = "flickrAPI-image-searchTests.xctest"
+               BlueprintName = "flickrAPI-image-searchTests"
+               ReferencedContainer = "container:flickrAPI-image-search.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
