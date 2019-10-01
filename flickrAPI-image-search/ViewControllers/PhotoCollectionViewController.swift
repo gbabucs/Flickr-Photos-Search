@@ -22,6 +22,7 @@ class PhotoCollectionViewController: UIViewController {
     
     var viewModel: PhotoCollectionViewModel?
     let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+    let addNewSections = 2
     
     //--------------------------------------------------------------------------
     // MARK: - ViewController LifeCycle
@@ -70,7 +71,7 @@ class PhotoCollectionViewController: UIViewController {
                 self.collectionView.reloadData()
             } else {
                 let numberOfSections = self.collectionView.numberOfSections
-                let lastIndexOfNewSections = numberOfSections + 2
+                let lastIndexOfNewSections = numberOfSections + self.addNewSections
                 let indexSet = IndexSet(integersIn: numberOfSections...lastIndexOfNewSections)
                 
                 self.collectionView.insertSections(indexSet)
