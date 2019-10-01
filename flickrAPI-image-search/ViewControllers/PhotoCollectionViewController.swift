@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class PhotoCollectionViewController: UIViewController {
     
@@ -22,7 +23,8 @@ class PhotoCollectionViewController: UIViewController {
     
     var viewModel: PhotoCollectionViewModel?
     let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
-    let addNewSections = 2
+    
+    let progress = JGProgressHUD(style: .dark)
     
     //--------------------------------------------------------------------------
     // MARK: - ViewController LifeCycle
@@ -31,11 +33,13 @@ class PhotoCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        progress.textLabel.text = "Loading"
         self.setupNavigationBar()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if NetworkState.isConnected() {
+            self.progress.show(in: self.view)
             
             self.viewModel?.requestPhotos { error in
                 if let error = error  {
@@ -43,6 +47,7 @@ class PhotoCollectionViewController: UIViewController {
                 }
                 
                 self.updateCollectionView()
+                self.progress.dismiss()
             }
             
         } else {
@@ -50,12 +55,6 @@ class PhotoCollectionViewController: UIViewController {
             
             self.showAlert(with: networkError.title, error: networkError.message)
         }
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
-        self.collectionView.reloadData()
     }
     
     //--------------------------------------------------------------------------
@@ -72,7 +71,7 @@ class PhotoCollectionViewController: UIViewController {
                 self.collectionView.reloadData()
             } else {
                 let numberOfSections = self.collectionView.numberOfSections
-                let lastIndexOfNewSections = numberOfSections + self.addNewSections
+                let lastIndexOfNewSections = numberOfSections + 2
                 let indexSet = IndexSet(integersIn: numberOfSections...lastIndexOfNewSections)
                 
                 self.collectionView.insertSections(indexSet)
