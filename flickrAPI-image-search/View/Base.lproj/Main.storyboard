@@ -111,10 +111,10 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="rUi-Ba-A3H" secondAttribute="bottom" id="IIL-qk-Ugy"/>
-                                                <constraint firstItem="rUi-Ba-A3H" firstAttribute="top" secondItem="aqy-CI-fo9" secondAttribute="top" id="gKY-rc-1Rp"/>
-                                                <constraint firstItem="rUi-Ba-A3H" firstAttribute="leading" secondItem="aqy-CI-fo9" secondAttribute="leading" id="sQe-7A-rJx"/>
-                                                <constraint firstAttribute="trailing" secondItem="rUi-Ba-A3H" secondAttribute="trailing" id="zY2-yy-NU0"/>
+                                                <constraint firstItem="rUi-Ba-A3H" firstAttribute="leading" secondItem="aqy-CI-fo9" secondAttribute="leading" id="8Kl-eA-dYS"/>
+                                                <constraint firstAttribute="trailing" secondItem="rUi-Ba-A3H" secondAttribute="trailing" id="O2W-Dc-hlV"/>
+                                                <constraint firstAttribute="bottom" secondItem="rUi-Ba-A3H" secondAttribute="bottom" id="goc-fU-AwH"/>
+                                                <constraint firstItem="rUi-Ba-A3H" firstAttribute="top" secondItem="aqy-CI-fo9" secondAttribute="top" id="kMY-7f-XBo"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="164" height="162"/>

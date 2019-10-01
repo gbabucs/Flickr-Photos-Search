@@ -33,11 +33,16 @@ class SearchViewController: UIViewController {
         
         self.title = "Flickr Photo Search"
         self.viewModel.getSearchHistory(completion: updateTableView)
+        self.setupTableView()
     }
     
     //--------------------------------------------------------------------------
     // MARK: - Helpers
     //--------------------------------------------------------------------------
+    
+    func setupTableView() {
+        self.tableView.tableFooterView = UIView()
+    }
     
     func resetSearchBar() {
         self.searchBar.resignFirstResponder()

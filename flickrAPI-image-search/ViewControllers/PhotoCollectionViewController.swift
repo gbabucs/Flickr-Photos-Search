@@ -50,6 +50,12 @@ class PhotoCollectionViewController: UIViewController {
         }
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        self.collectionView.reloadData()
+    }
+    
     //--------------------------------------------------------------------------
     // MARK: - Helpers
     //--------------------------------------------------------------------------
