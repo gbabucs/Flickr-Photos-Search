@@ -10,6 +10,9 @@ pod install
 pod 'Alamofire', '~> 5.0.0-rc.2' <br />
 pod 'AlamofireImage', '4.0.0-beta.5'
 
+# CI/CD
+Used Travis CI tool for CI/CD <br />
+https://github.com/gbabucs/Flickr-Photos-Search/runs/243332107
 
 # Requirements
 Deployment target of your App is >= iOS 13.0<br />
