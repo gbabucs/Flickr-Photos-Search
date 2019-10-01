@@ -8,7 +8,8 @@ optional if pod is not working do pod deintegrate and then pod install
 
 # Third Party Library used
 pod 'Alamofire', '~> 5.0.0-rc.2' <br />
-pod 'AlamofireImage', '4.0.0-beta.5'
+pod 'AlamofireImage', '4.0.0-beta.5'  <br />
+pod 'JGProgressHUD'
 
 # CI/CD
 Used Travis CI tool for CI/CD <br />
