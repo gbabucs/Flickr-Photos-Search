@@ -66,6 +66,7 @@ extension PhotoCollectionViewController: UICollectionViewDelegate {
         if NetworkState.isConnected() {
             if isLoadMore {
                 viewModel.requestPhotos { error in
+                    
                     if let error = error  {
                         self.showAlert(with: error.title, error: error.message)
                     }

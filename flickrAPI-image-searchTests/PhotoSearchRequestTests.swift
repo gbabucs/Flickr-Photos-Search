@@ -20,7 +20,7 @@ class PhotoSearchRequestTests: XCTestCase {
         self.photoSearchRequest = nil
     }
     
-    func testParsePhoto_have_original_model_values() {
+    func test_Parse_Photo_have_original_model_values() {
         let photos = self.photoSearchRequest.parsePhotos(with: imageResultModel)
         
         XCTAssertEqual(photos.count, imageResultModel.photos.photo.count, "Expected both should have same count")
@@ -28,7 +28,7 @@ class PhotoSearchRequestTests: XCTestCase {
         XCTAssertEqual(photos.first?.id, imageResultModel.photos.photo.first?.id, "Expected both should have same id: \(String(describing: photos.first?.id))")
     }
     
-    func testParseMetaDataContains_CurrentPage_and_totalPages() {
+    func test_Parse_MetaDataContains_CurrentPage_and_totalPages() {
         let metaData = self.photoSearchRequest.parseMetaData(with: imageResultModel)
         let currentPage = metaData["currentPage"] as? Int
         let totalPages = metaData["totalPages"] as? Int

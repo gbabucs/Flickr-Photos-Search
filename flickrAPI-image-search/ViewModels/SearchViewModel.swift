@@ -26,6 +26,10 @@ class SearchViewModel {
     
     var searchHistory: [String] = []
     
+    init(history: [String] = []) {
+        self.searchHistory = history
+    }
+    
     //--------------------------------------------------------------------------
     // MARK: - Functions
     //--------------------------------------------------------------------------

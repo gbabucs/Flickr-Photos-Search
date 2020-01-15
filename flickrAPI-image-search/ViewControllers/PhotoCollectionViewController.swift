@@ -72,9 +72,11 @@ class PhotoCollectionViewController: UIViewController {
             } else {
                 let numberOfSections = self.collectionView.numberOfSections
                 let lastIndexOfNewSections = numberOfSections + 2
-                let indexSet = IndexSet(integersIn: numberOfSections...lastIndexOfNewSections)
                 
-                self.collectionView.insertSections(indexSet)
+                if lastIndexOfNewSections > numberOfSections {
+                    let indexSet = IndexSet(integersIn: numberOfSections...lastIndexOfNewSections)
+                    self.collectionView.insertSections(indexSet)
+                }
             }
         }
     }

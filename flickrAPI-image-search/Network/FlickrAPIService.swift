@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 
-class FlickrAPIService: NSObject {
+class FlickrAPIService {
     
     private let flickrAPI: FlickrAPI
     

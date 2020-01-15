@@ -25,6 +25,11 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         self.imageView.contentMode = .scaleAspectFit
         self.imageView.translatesAutoresizingMaskIntoConstraints = true
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.imageView.image = nil
+    }
 }
 
 //--------------------------------------------------------------------------
