@@ -96,7 +96,6 @@
 		6F527B902342AC3C00136F56 /* FlickrAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPITests.swift; sourceTree = "<group>"; };
 		6F527B922342B10700136F56 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 		6FFDF16C23CF693E00598244 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6FFDF16E23CF71B300598244 /* FlickrImage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlickrImage.entitlements; sourceTree = "<group>"; };
 		788A630B3B83CAC24EDDFAF6 /* Pods-flickrAPI-image-searchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flickrAPI-image-searchTests.debug.xcconfig"; path = "Target Support Files/Pods-flickrAPI-image-searchTests/Pods-flickrAPI-image-searchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C520E2291C74DB958418A8B /* Pods_flickrAPI_image_search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flickrAPI_image_search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72F300544270D6721693037 /* Pods_flickrAPI_image_searchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flickrAPI_image_searchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,7 +221,6 @@
 		E73E401B233ECE6E00F27615 /* flickrAPI-image-search */ = {
 			isa = PBXGroup;
 			children = (
-				6FFDF16E23CF71B300598244 /* FlickrImage.entitlements */,
 				6F46E44B2342298600403707 /* Resources */,
 				6F46E44423421BB900403707 /* Extension */,
 				E73E4045233F6DC800F27615 /* Network */,
