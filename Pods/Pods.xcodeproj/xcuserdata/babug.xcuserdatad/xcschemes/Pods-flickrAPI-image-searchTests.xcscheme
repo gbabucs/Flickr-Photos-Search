@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "43CFBF93F8DAFCFE982FC7A6BD949872"
+               BlueprintIdentifier = "4A71900B4CB611AF263C7CDA0C97BDFB"
                BuildableName = "Pods_flickrAPI_image_searchTests.framework"
                BlueprintName = "Pods-flickrAPI-image-searchTests"
                ReferencedContainer = "container:Pods.xcodeproj">

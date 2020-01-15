@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Crashlytics
 
 //--------------------------------------------------------------------------
 // MARK: - UISearchBarDelegate
@@ -20,6 +21,8 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text else { return }
+        
+        Crashlytics.sharedInstance().crash()
         
         self.viewModel.save(search: searchText, with: updateTableView)
         

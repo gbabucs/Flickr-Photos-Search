@@ -34,6 +34,7 @@ class SearchViewController: UIViewController {
         self.title = "Flickr Photo Search"
         self.viewModel.getSearchHistory(completion: updateTableView)
         self.setupTableView()
+        print("hola")
     }
     
     //--------------------------------------------------------------------------
