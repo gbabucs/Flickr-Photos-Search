@@ -774,9 +774,10 @@
 			baseConfigurationReference = 50D1D5707511C9AAC015C9F8 /* Pods-flickrAPI-image-search.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 6Z8GN8WKY7;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = "flickrAPI-image-search/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -786,6 +787,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.babu.test.flickrAPI-image-search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -796,8 +798,9 @@
 			baseConfigurationReference = 19E9F101556FCC4C0A6C802E /* Pods-flickrAPI-image-search.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6Z8GN8WKY7;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = "flickrAPI-image-search/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -807,6 +810,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.babu.test.flickrAPI-image-search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
