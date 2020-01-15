@@ -40,7 +40,7 @@ platform :ios do
     emails = values[:test_email] ? values[:test_email] : ['[email]'] # You can list more emails here
     groups = values[:test_email] ? nil : nil # You can define groups on the web and reference them here
  
-    upload_symbols_to_crashlytics(gsp_path: "./App/GoogleService-Info.plist")
+    upload_symbols_to_crashlytics
  
     end
 end
