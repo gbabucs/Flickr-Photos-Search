@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>357282088079-3ag12t01e8lfp8v04jog933imudu7kmk.apps.googleusercontent.com</string>
+	<string>357282088079-16p0gtlj6v1naombvmsd9cjnk5pd3hok.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.357282088079-3ag12t01e8lfp8v04jog933imudu7kmk</string>
+	<string>com.googleusercontent.apps.357282088079-16p0gtlj6v1naombvmsd9cjnk5pd3hok</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBthGj-1w6MPjaCFPFC6OMN35X6YyORCX4</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.babu.test.flickrAPI-image-search</string>
+	<string>com.babu.flickrimage</string>
 	<key>PROJECT_ID</key>
 	<string>flickrimage-1d1bb</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:357282088079:ios:c289fb7ef4a27ab6a51cfa</string>
+	<string>1:357282088079:ios:337b0f586d8eb511a51cfa</string>
 	<key>DATABASE_URL</key>
 	<string>https://flickrimage-1d1bb.firebaseio.com</string>
 </dict>
