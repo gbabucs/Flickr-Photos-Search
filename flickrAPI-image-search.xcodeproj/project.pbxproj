@@ -776,7 +776,7 @@
 			baseConfigurationReference = 50D1D5707511C9AAC015C9F8 /* Pods-flickrAPI-image-search.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "flickrAPI-image-search/FlickrImage.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -801,7 +801,7 @@
 			baseConfigurationReference = 19E9F101556FCC4C0A6C802E /* Pods-flickrAPI-image-search.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "flickrAPI-image-search/FlickrImage.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z8GN8WKY7;
