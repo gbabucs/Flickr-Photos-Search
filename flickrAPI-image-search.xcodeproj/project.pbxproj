@@ -40,6 +40,7 @@
 		6F527B912342AC3C00136F56 /* FlickrAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F527B902342AC3C00136F56 /* FlickrAPITests.swift */; };
 		6F527B932342B10700136F56 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F527B922342B10700136F56 /* SearchViewControllerTests.swift */; };
 		6FFDF16D23CF693E00598244 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FFDF16C23CF693E00598244 /* GoogleService-Info.plist */; };
+		6FFDF17623CFC04100598244 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FFDF16C23CF693E00598244 /* GoogleService-Info.plist */; };
 		E729082723413B9A0023ECDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729082623413B9A0023ECDC /* SceneDelegate.swift */; };
 		E729082923413F630023ECDC /* SearchViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729082823413F630023ECDC /* SearchViewController+UITableView.swift */; };
 		E73E401D233ECE6E00F27615 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E401C233ECE6E00F27615 /* AppDelegate.swift */; };
@@ -324,7 +325,6 @@
 				6F46E437234210EE00403707 /* Frameworks */,
 				6F46E438234210EE00403707 /* Resources */,
 				93449315C2A4D777324C8327 /* [CP] Embed Pods Frameworks */,
-				6FFDF16B23CF1BEB00598244 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -345,6 +345,7 @@
 				E73E4016233ECE6E00F27615 /* Frameworks */,
 				E73E4017233ECE6E00F27615 /* Resources */,
 				9E8A3E8322C65092EE2293A1 /* [CP] Embed Pods Frameworks */,
+				6FFDF17023CFBCF100598244 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -399,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F46E44E23422CDA00403707 /* FlickrResult.json in Resources */,
+				6FFDF17623CFC04100598244 /* GoogleService-Info.plist in Resources */,
 				6F46E46B23422D5500403707 /* LaunchScreen.storyboard in Resources */,
 				6F46E46A23422D5000403707 /* Assets.xcassets in Resources */,
 			);
@@ -441,7 +443,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6FFDF16B23CF1BEB00598244 /* Fabric */ = {
+		6FFDF17023CFBCF100598244 /* Fabric */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -631,7 +633,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/flickrAPI-image-search.app/flickrAPI-image-search";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlickrImage.app/FlickrImage";
 			};
 			name = Debug;
 		};
@@ -653,7 +655,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/flickrAPI-image-search.app/flickrAPI-image-search";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlickrImage.app/FlickrImage";
 			};
 			name = Release;
 		};

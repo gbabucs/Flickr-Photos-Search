@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import flickrAPI_image_search
+@testable import FlickrImage
 
 class SearchViewControllerTests: XCTestCase {
 

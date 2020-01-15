@@ -22,8 +22,6 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text else { return }
         
-        Crashlytics.sharedInstance().crash()
-        
         self.viewModel.save(search: searchText, with: updateTableView)
         
         performSegue(withIdentifier: UIStoryboardSegue.identifier, sender: searchText)
